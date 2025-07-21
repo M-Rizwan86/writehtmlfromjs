@@ -3,59 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 100px;
-    }
-
-    button {
-      width: 100px;
-      margin: 10px;
-      padding: 10px;
-      cursor: pointer;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-      margin-top: 20px;
-    }
-
-    li {
-      background-color: #ddd;
-      margin: 5px;
-      padding: 8px 12px;
-      border-radius: 4px;
-    }
-  </style>
+    <title>Product Website</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="display: flex;">
-    
-    <body>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Product Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <section id="home" class="hero-section">
   <div class="container">
-    <button onclick="xyz()">Run</button>
-    <button onclick="xyz2()">Prompt</button>
-    <ul id="fruits"></ul>
+    <h1 class="text-dark text-center mb-4">Our Product</h1>
+    <div id="cardid" class="card-container"></div>
   </div>
+</section>
+
+   
+
+
+    <!-- Features Section -->
+    <section id="features" class="feature-section">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Easy to Use</h3>
+                    <p>Our product is designed to be user-friendly and easy to use.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Performance</h3>
+                    <p>Experience lightning-fast performance with our product.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure</h3>
+                    <p>Your data is safe with our top-notch security features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/600x400" alt="About Us" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <h3>Our Story</h3>
+                    <p>We are a dedicated team of professionals committed to delivering the best products to our customers. Our journey started with a simple idea and has grown into a successful business.</p>
+                    <p>Our mission is to provide high-quality products that meet the needs of our customers. We believe in innovation, quality, and customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="footer bg-dark text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <h5>About Us</h5>
+                <p>We are a dedicated team of professionals committed to delivering the best products to our customers. Our mission is to provide high-quality products that meet the needs of our customers.</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white mr-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white mr-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#home" class="text-white">Home</a></li>
+                    <li><a href="#features" class="text-white">Features</a></li>
+                    <li><a href="#about" class="text-white">About</a></li>
+                    <li><a href="#contact" class="text-white">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Contact Info</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt mr-2"></i>123 Street, City, Country</li>
+                    <li><i class="fas fa-phone mr-2"></i>+123 456 7890</li>
+                    <li><i class="fas fa-envelope mr-2"></i>info@example.com</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+                <h5>Newsletter</h5>
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="newsletterEmail" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <hr class="bg-light">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left">
+                <p>&copy; 2023 Product Website. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#" class="text-white">Privacy Policy</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white">Terms of Service</a></li>
+                    <li class="list-inline-item"><a href="#" class="text-white">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
     <script src="index.js"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
